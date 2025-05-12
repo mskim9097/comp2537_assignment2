@@ -1,0 +1,18 @@
+<%- include('templates/header.ejs') %>
+<div class="container">
+    <h1>Hello, <%= user %>.</h1>
+    <div class="row">
+        <% images.forEach((image) => { %>
+            <div class="col-12 col-sm-6 col-md-4 mb-3">
+                <div class="card h-100">
+                  <img 
+                    src="/<%= image %>" 
+                    class="card-img-top img-fluid" 
+                    alt="Cat image">
+                </div>
+              </div>
+        <% }) %>
+    </div>    
+    <button class="btn btn-lg btn-primary btn-sm my-1" onclick="location.href='/logout'">Sign out</button>
+</div>
+<%- include('templates/footer.ejs') %>

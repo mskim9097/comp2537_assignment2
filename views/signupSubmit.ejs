@@ -1,0 +1,17 @@
+<%- include('templates/header.ejs') %>
+<div class="container">
+    <% if(!name) { %>
+        Name is required.<br>
+    <% } %>
+    <% if(!email) { %>
+        Email is required.<br>
+    <% } %>
+    <% if(!password) { %>
+        Password is required.<br>
+    <% } %>
+    <% if(invalidFormat) { %>
+        Name, email, or password is not in a valid format.<br>
+    <% } %>
+    <br><a href="/signup">Try again</a>
+</div>
+<%- include('templates/footer.ejs') %>

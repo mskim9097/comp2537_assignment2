@@ -1,0 +1,24 @@
+<%- include('templates/header.ejs') %>
+<div class="container">
+    <main class="form-signup">
+        <form action='/signupSubmit' method='post'>
+            <h1 class="h3 mb-3 fw-normal">Please sign up</h1>
+
+            <div class="form-floating">
+                <input name='name' type="text" class="form-control" id="name" placeholder="user name">
+                <label for="name">User name</label>
+            </div>
+            <div class="form-floating">
+                <input name='email' type="email" class="form-control" id="email" placeholder="name@example.com">
+                <label for="email">Email address</label>
+            </div>
+            <div class="form-floating">
+                <input name='password' type="password" class="form-control" id="password"
+                placeholder="Password">
+                <label for="password">Password</label>
+            </div>
+            <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
+        </form>
+    </main>
+</div>
+<%- include('templates/footer.ejs') %>

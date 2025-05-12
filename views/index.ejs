@@ -1,0 +1,16 @@
+<%- include('templates/header.ejs') %>
+<div class="container">
+<% if(!authenticated) { %>
+    <button class="btn btn-lg btn-primary btn-sm my-1" onclick="location.href='/signup'">Sign up</button>
+    <br>
+    <button class="btn btn-lg btn-primary btn-sm my-1" onclick="location.href='/login'">Log in</button>
+<% } else { %>
+    Hello, <%= name %>!<br>
+    <button class="btn btn-lg btn-primary btn-sm my-1" onclick="location.href='/members'">
+        Go to Members Area
+    </button>
+    <br>
+    <button class="btn btn-lg btn-primary btn-sm my-1" onclick="location.href='/logout'">Logout</button>
+    <% } %>            
+</div>
+<%- include('templates/footer.ejs') %>

@@ -1,0 +1,11 @@
+<%- include('templates/header.ejs') %>
+<div class="container">
+    <% if(invalidFormat) { %>
+        Email or password is not in a valid format.<br><br>
+    <% } %>
+    <% if(notFound) { %>
+        Invalid email/password combination.<br><br>
+        <% } %>
+    <a href="/login">Try again</a>
+</div>
+<%- include('templates/footer.ejs') %>
